@@ -1,0 +1,55 @@
+@charset "UTF-8";
+//! Global
+$fontFamily:"yahei";
+//栅格化布局
+$susyBoxSizing:border-box;
+$susyColumns:12;//列
+$susyGutters:.25;//间隔
+$containerWidth:90%;//最大宽度
+//! Alert
+$alertBackgroundColor: #fff !default;
+$allColor: red;
+
+//! Pop-Str
+$popStrColor: red orange yellow green blue indigo purple aqua;
+
+$positionABC: absolute;
+
+//屏幕大小
+// $screen-xs: max-width 320px;
+// $screen-s: max-width 480px;
+// $screen-md: max-width 640px;
+// $screen-bg: max-width 750px;
+
+
+//头部高度
+$headerHeight: 2.5rem;
+$fontSize: 1rem;
+$headerTop: .9rem;
+//nav
+$ulHeight: 2.85rem;
+$ulfontSize: .95rem;
+
+//goods
+$dlHeight:5.875rem;
+$dlPadding: 0.75rem;
+$dtHeight:4.25rem;
+$dtImgW:5.3rem;
+$dtImgH:4.05rem;
+$ddHeight: 4.25rem;
+
+//banner
+$bannerHeight: 6.25rem;
+$bannerPerspective : 31.2rem;
+$bannerWidth:23.4rem;
+$banner3D:11.6rem;
+
+
+
+*{
+  color: #555555;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+a{
+  text-decoration: none;
+}

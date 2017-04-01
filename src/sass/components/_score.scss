@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+//评分
+section{
+  &.score{
+    line-height: 60px;
+    padding: 17px 0 0 26px;
+    h2{
+      font-size: 28px;
+    }
+    ul{
+      &.scoreList{
+        li{
+          height: 60px;
+          position: relative;
+          span{
+          }
+          nav{
+            position: absolute;
+            left: 187px;
+            top: 12px;
+            a{
+              float: left;
+              background: url("../images/star.png") no-repeat -38px 0;
+              width: 38px;
+              height: 36px;
+              margin-right: 39px;
+            }
+            .active{
+              background-position: 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

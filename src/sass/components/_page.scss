@@ -1,0 +1,167 @@
+@charset "UTF-8";
+//入场动画，首页设置好CSS3 最后把透明度变成0 清除掉显示的CLASS
+body{
+  margin: 0;
+  font-family: "yahei";
+  color: #555;
+  position: relative;
+}
+section{
+  &#welcome{@include transition(1s)}
+  &.page{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    overflow: hidden;
+    background: #ffffff;
+    font-size: 26px;
+    display: none;
+    &:nth-of-type(1){
+      z-index: 10;
+      .tree{
+        position: absolute;
+        left: 0;
+        top: 10%;
+        width: 100%;
+        //特效用.
+        //@include transform2d(translateY(100px));
+        //@include opacity(0);
+        //@include animation(1s tree);
+        ////到达目标点停止动画
+        //@include animation-fill-mode(forwards);
+        //距离30px 透明度0 动画名字 1秒 延迟.
+        @include animatop(100px,0,tree,1s,null);
+        .welcome2{
+          //border:1px solid red;
+          position: relative;
+          padding-top: 50px;
+          //距离30px 透明度0 动画名字 1秒 延迟.
+          @include animatop(50px,0,tree,1s,.3s);
+          .shake{
+            position: absolute;
+            left: 509px;
+            top: 12px;
+            width: 28px;
+            height: 32px;
+            background: url("/images/shake.png") no-repeat;
+            @include animation(shake 1s 1s);
+            @include transform-origin( bottom, left );
+          }
+        }
+        .tree3{
+          margin-top: 20px;
+          //距离30px 透明度0 动画名字 1秒 延迟.
+          @include animatop(30px,0,tree,1s,.6s);
+        }
+        .cloud{
+          position: absolute;
+          background: url("/images/cloud.png") no-repeat;
+          background-size: contain;
+          &:nth-of-type(1){
+            left: 432px;
+            top: 15px;
+            width: 58px;
+            height: 44px;
+            @include animation(cloud 5s infinite alternate linear);
+          }
+          &:nth-of-type(2){
+            left: 79px;
+            top: 77px;
+            width: 91px;
+            height: 70px;
+            @include animation(cloud 2.5s 2.8s linear alternate infinite);
+          }
+          &:nth-of-type(3){
+            left: 402px;
+            top: 142px;
+            width: 54px;
+            height: 41px;
+            @include animation(cloud 4s 1.2s infinite alternate linear);
+          }
+        }
+      }
+      h1#logo{
+        text-align: center;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: 5%;
+        @include opacity(0);
+        @include animation(logo .5s 1s);
+        @include animation-fill-mode(forwards);
+      }
+    }
+    &:nth-of-type(2){z-index: 9;}
+    &:nth-of-type(3){z-index: 8;}
+    &:nth-of-type(4){z-index: 7;}
+    &:nth-of-type(5){
+      z-index: 6;
+    }
+    &:nth-of-type(6){
+      z-index: 5;
+    }
+  }
+  &.pageShow{
+    @extend %pageShow;
+  }
+}
+
+@include keyframes(tree){
+  100%{
+    @include transform2d(translateY(0px));
+    @include opacity(1);
+  }
+                   }
+@include keyframes(logo){
+  100%{
+    @include opacity(1);
+  }
+}
+@include keyframes(cloud){
+  0%{
+    @include translateX(0);
+  }
+  100%{
+    @include translateX(-50px);
+  }
+}
+@include keyframes(shake){
+  0%{
+    @include rotate(0deg);
+  }
+  10%{
+    @include rotate(-40deg);
+  }
+  20%{
+    @include rotate(40deg);
+  }
+  30%{
+    @include rotate(-30deg);
+  }
+  40%{
+    @include rotate(30deg);
+  }
+  50%{
+    @include rotate(-10deg);
+  }
+  60%{
+    @include rotate(10deg);
+  }
+  70%{
+    @include rotate(-5deg);
+  }
+  80%{
+    @include rotate(5deg);
+  }
+  90%{
+    @include rotate(-1deg);
+  }
+  100%{
+    @include rotate(0deg);
+  }
+}
+
+%pageShow{
+  display: block;
+}

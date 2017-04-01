@@ -1,0 +1,55 @@
+@charset "UTF-8";
+section{
+  &#banner{
+  overflow:hidden; 
+  height: $bannerHeight;
+  border: 1px solid yellow;
+  perspective: 1000px;/*视镜*/
+   .banner {
+     width: $bannerWidth; 
+     position: relative;
+     transform-style:preserve-3d;
+     transform-origin: center center -11.6rem;
+     transition: 2s;
+
+    a {
+      width: 100%; height: $bannerHeight;
+      display:  block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      img{
+        width: 100%;
+      }
+      &:nth-child(1){
+        outline:1px solid #0A8CD2; 
+        transform: rotateY(0deg) translateZ(-$bannerWidth);
+        img{
+           // transform: rotateY(180deg);
+           transform: rotateY(.5turn);
+        }
+      }
+      &:nth-child(2){
+        outline: 1px solid red; /* transform-origin: center; */
+        transform: rotateY(0deg) translateZ(0rem);
+      }
+      &:nth-child(3){
+        outline:1px solid greenyellow; /* transform-origin: center center -357px; */
+        transform: translate3d($banner3D,0rem,-$banner3D) rotateY(-90deg);
+      }
+      &:nth-child(4){
+        outline:1px solid blueviolet; /* transform-origin: left center; */
+        transform: translate3d(-$banner3D,0rem,-$banner3D) rotateY(-90deg);
+      }
+    }
+     animation: onr 15s linear infinite;
+     // &:hover {
+     //  transform: rotateY(180deg);
+     // }
+   }
+  }
+}
+// @keyframes onr {
+//   from{transform: rotateY(0deg);}
+//   to{transform: rotateY(360deg);}
+// }

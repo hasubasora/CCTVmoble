@@ -1,0 +1,57 @@
+dl.goodsList{
+	  padding:$dlPadding;
+		outline: 1px solid red;
+	  border-bottom: 1px solid #ccc;
+	  color: #555555;
+	  height: $dlHeight;
+	  dt{
+		  outline: 1px solid #ccc;
+		  @include span(3);
+		  height: $dtHeight;
+		  text-align: center;
+		  padding: 0;
+		  img{
+			  width: $dtImgW;
+			  height: $dtImgH;
+		  }
+	  }
+	  dd{
+		  // outline: 1px solid skyblue;
+		  @include span(9);
+		  position: relative;
+		  height: $ddHeight;
+		  h1{
+			  // outline: 1px solid blue;
+			  line-height: $fontSize;
+			  height: $fontSize * 2;
+			  position: $positionABC;
+			  @include span(12);
+			  padding-left: $fontSize - .25;
+			  font-size: $fontSize - 4;
+		  }
+		  span{
+			  position: $positionABC;
+			  bottom: .2rem;
+			  left: .75rem;
+			  font-size: $fontSize - 7;
+			  color: #ff6d00;
+			  i{
+				  color: #555;
+			  }
+		  }
+		  input[name=btn]{
+			  position: $positionABC;
+			  background-color: #ff6d00;
+			  border-radius: 4px;
+			  color: #fff;
+			  padding: .5rem 1.1rem;
+			  font-size: 0.825rem;
+			  bottom: -2px;
+			  right: 0.7rem;
+			  border:0;
+			  outline: 0;
+		  }
+
+
+	  }
+  }

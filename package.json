@@ -1,0 +1,30 @@
+{
+  "name": "cctvmoble",
+  "version": "0.0.1",
+  "description": "play",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Sass",
+    "Compass"
+  ],
+  "author": "cat",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "compass": "^0.1.1",
+    "graceful-fs": "^4.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "cctv"
+  }
+}

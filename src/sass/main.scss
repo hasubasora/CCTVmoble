@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/*! Vendor*/
+@import
+  "compass",
+  "susy",
+  "breakpoint",
+  "compass/css3",
+  "compass/css3/animation",
+  "compass/reset",
+  "normalize-version",
+  "normalize/base",
+  "normalize/html5",
+  "normalize/links"
+; 
+
+/*! Helpers*/
+@import
+"helpers/variables"
+, "helpers/mixins";
+
+/*！layout 布局* /
+@import "layout/main";
+
+/*! Component 组件*/
+@import
+"components/page"
+, "components/homePage"
+, "components/score"
+//,"components/pop-stripe"
+//,"components/nav"
+//,"components/banner"
+//,"components/goods"
+//,"components/userInfo"
+;

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=640,user-scalable=no"/>
+  <title>入场动画</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css"/>
+  <script type="text/javascript" src="javascripts/index.js"></script>
+
+</head>
+<body>
+  <script type="text/javascript">
+      //根据屏幕宽度调整
+    document.body.style.height=view().h+"px";
+  </script>
+<!--第一页进场动画-->
+<section class="page pageShow" id="welcome">
+  <div class="tree">
+      <img src="images/tree.jpg">
+      <div class="welcome2">
+        <img src="images/title.png">
+        <span class="shake"></span>
+      </div>
+      <img src="images/title2.png" class="tree3">
+      <span class="cloud"></span>
+      <span class="cloud"></span>
+      <span class="cloud"></span>
+  </div>
+    <h1 id="logo">
+        <img src="images/logo.png">
+    </h1>
+</section>
+
+<section class="page">
+  上传成功
+</section>
+<section class="page">
+  表单
+</section>
+<section class="page">
+  新闻
+</section>
+<section class="page">
+  跳转
+</section>
+  <!--首页-->
+<section class="page pageShow">
+  <section id="tabPic">
+        <ul id="picList">
+            <li><img src="images/1.jpg"></li>
+            <li><img src="images/2.jpg"></li>
+            <li><img src="images/3.jpg"></li>
+            <li><img src="images/4.jpg"></li>
+            <li><img src="images/5.jpg"></li>
+        </ul>
+        <section class="picMask">
+          <p>景区</p>
+          <nav>
+              <a href="javascript:void(0)" class="active"></a>
+              <a href="javascript:void(0)"></a>
+              <a href="javascript:void(0)"></a>
+              <a href="javascript:void(0)"></a>
+              <a href="javascript:void(0)"></a>
+          </nav>
+        </section>
+  </section>
+    <!--评分-->
+    <section class="score">
+       <h2>综合评分</h2>
+        <ul class="scoreList">
+            <li>
+                <span>综合评价</span>
+                <nav>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                </nav>
+                <input type="hidden" value="0">
+            </li>
+            <li>
+                <span>综合评价</span>
+                <nav>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                </nav>
+                <input type="hidden" value="0">
+            </li>
+            <li>
+                <span>综合评价</span>
+                <nav>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                </nav>
+                <input type="hidden" value="0">
+            </li>
+        </ul>
+    </section>
+</section>
+
+
+</body>
+<script>
+
+    fnLoad();
+    fnScore();
+</script>
+</html>

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+ul.teat{
+  &>li:nth-child(3n+4){//指定第七个后清除
+    clear:both;
+  }
+}
+

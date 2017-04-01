@@ -1,0 +1,28 @@
+@mixin btn{
+  width: 80%;
+  box-shadow: 1px 1px 0 0 #000000;
+}
+
+.alert{
+  @include padding-leader(0.5);
+  @include padding-trailer(0.5);
+  background: $alertBackgroundColor;
+  color: $allColor;
+  //@include btn;
+ p{
+   margin:0;
+   @include padding-trailer(0);
+ }
+  a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #6e6e6e;
+    &:hover,&:focus{
+      text-decoration: underline;
+    }
+  }
+
+  &.sky{
+    background-color: #0000AA;
+  }
+}

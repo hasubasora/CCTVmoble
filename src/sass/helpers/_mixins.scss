@@ -1,0 +1,9 @@
+@charset "UTF-8";
+//入屏动画，距离，透明度，动画名字，速度，延迟
+@mixin animatop($px,$opac,$name,$m,$s){
+  @include transform2d(translateY($px));
+  @include opacity($opac);
+  @include animation($m $s $name);
+  //到达目标点停止动画.
+  @include animation-fill-mode(forwards);
+}

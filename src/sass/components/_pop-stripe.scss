@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@function str($position,$colors){
+  //如果颜色类型不等于list的，转换成list，否则直接用颜色
+  $colors:if(type_of($colors) !='list', compact($colors),$colors);
+  //一个list
+  $len:length($colors);
+  $gradient: compact();
+  //计算每个格子的宽度，用颜色的长度判断,变成百分比
+  $width:percentage( 1 / $len );
+  @for $i from 1 through $len{
+    //每个颜色
+    $currentColor:nth($colors,$i);
+    //第一个百分比从0开始-每个的位置
+    $temp: $currentColor($width*($i - 1)) , $currentColor($width * $i);
+    //链接起，颜色，百分比，逗号
+    $gradient: join($gradient,$temp,comma);
+  }
+  @return linear-gradient($position,$gradient);
+}
+
+.pop{
+  height: 1.25em;
+  @include background-image(str(left,$popStrColor))
+}

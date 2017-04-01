@@ -1,0 +1,39 @@
+section.info{
+	a{
+	 width: 100%;
+	 height:100%;
+	 	outline: 1px solid red;
+		dl.infoBack{
+			outline: 1px solid blue;
+			height: 200px;
+			background: orange;
+			dt.infoImg{
+				width: 100%;
+				height:100%;
+				text-align: center;
+				height: 100px;
+				@include span(3);
+				outline: 1px solid blue;
+			}
+			dd{
+				@include span(9);
+				outline: 1px solid blue;
+				height: 100px;
+				p{
+					&:nth-child(1){
+						margin-top: 35px;
+				 // line-height: 25px;
+					}
+				}
+			}
+		}
+		&:nth-child(2){
+			@include span(6);
+
+		}
+		&:nth-child(3){
+			@include span(6);
+		}
+	}
+
+}

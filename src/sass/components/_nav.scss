@@ -1,0 +1,48 @@
+nav{
+  ul.goodsNav{
+    clear: both;
+    text-align: left;
+    height: $ulHeight;
+    box-shadow: 0 0 0 0px;
+    li{
+      @include span(4);
+      text-align: center;
+      line-height: $ulHeight;
+      height: $ulHeight;
+      font-size: $ulfontSize;
+      a{
+        width: 100%;
+        display: inline-block;
+        padding: 0;
+          &.btn-0:before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: .4rem;
+           background: rgba(219,224,255,0.5);
+          }
+          &.btn-0:hover {
+            color: #555;
+          }
+          &.btn-0:hover:before {
+            height:100%;
+          }
+          &.btn-0:active {
+            background: #dbe0ff;
+          }
+      }
+    }
+  }
+}        
+[class^="btn-"] {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    text-transform: uppercase;
+    overflow: hidden;
+    // border: 1px solid #6600ff;
+  }
+

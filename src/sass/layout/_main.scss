@@ -1,0 +1,31 @@
+@charset "UTF-8";
+//栅格布局配置.引入susy库
+$susy:(
+        global-box-sizing:$susyBoxSizing,
+        columns:$susyColumns,//列
+        gutters:$susyGutters,//间隔
+        gutter-position:inside//位置
+);
+@include border-box-sizing();
+html,body{
+  font-family: $fontFamily;
+  font-size: 100%;
+}
+html *,
+html *:before,
+html *:after {
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+html i, html em,
+html b, html strong,
+html span {
+  -webkit-transition: none;
+  transition: none;
+}
+.container{
+  @include container($containerWidth);//最大宽度
+  @include clearfix;
+}
+
+
